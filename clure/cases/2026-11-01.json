@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-25",
+  "caseNumber": 1,
+  "title": "The Water Snake",
+  "victim": {
+    "name": "Hannah",
+    "age": 20,
+    "description": "Agoraphobic and triskaidekaphobic. Owes $300 to Tabby. Dog on a raw egg diet.",
+    "pos": { "x": 42, "y": 32 },
+    "photo": "./cases/victim1.png"
+  },
+  "police": {
+    "name": "O'Crimey",
+    "relation": "Police Chief",
+    "photo": "",
+    "description": "At a loss",
+    "pos": { "x": 70, "y": 60 }
+  },
+  "scene": {
+    "headline": "Hannah Found Dead in Walmart",
+    "location": "Murdered in Intimates Section",
+    "time": "Saturday, approx. 9:00 PM",
+    "summary": "Injected with Portuguese Water Snake Venom",
+    "description": "Police Chief O'Crimey is 'At a loss'",
+    "pos": { "x": 39, "y": 72 }
+  },
+  "suspects": [
+    {
+      "id": "s1",
+      "number": 1,
+      "name": "Tabby",
+      "age": 20,
+      "relation": "Victim's bookie",
+      "photo": "",
+      "description": "Communications major",
+      "pos": { "x": 5, "y": 5 }
+    },
+    {
+      "id": "s2",
+      "number": 2,
+      "name": "Andre",
+      "age": 19,
+      "relation": "Classmate",
+      "photo": "",
+      "description": "Rumored blackmailer. Recently received an honor code violation",
+      "pos": { "x": 80, "y": 5 }
+    },
+    {
+      "id": "s3",
+      "number": 3,
+      "name": "Samantha",
+      "age": 19,
+      "relation": "Hannah's bestie",
+      "photo": "",
+      "description": "Andre's ex. Recently went on a trip to Lisbon",
+      "pos": { "x": 5, "y": 58 }
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "type": "Evidence",
+      "title": "Family Relations",
+      "summary": "",
+      "description": "Victim is self-proclaimed 'daddys girl'. Victim's Father is an Organic Chem Professor",
+      "photo":"./cases/Family.png",
+      "pos": { "x": 24, "y": 34 }
+    },
+    {
+      "id": "c2",
+      "type": "Document",
+      "title": "Bookie Letter",
+      "summary": "Tabby kept track of all of Hannah's transactions",
+      "description": "Dead clients don't pay",
+      "pos": { "x": 5, "y": 35 }
+    },
+    {
+      "id": "c3",
+      "type": "Video",
+      "title": "Location on Incident",
+      "summary": "Found in Aisle 13 during murder",
+      "pos": { "x": 61, "y": 6 }
+    },
+    {
+      "id": "c4",
+      "type": "Video",
+      "title": "Camera Footage",
+      "summary": "Found hanging around in dairy section",
+      "pos": { "x": 21, "y": 70 }
+    }
+  ],
+  "connections": [
+    ["victim", "s1"], ["victim", "s2"], ["victim", "s3"],
+    ["victim", "c1"], ["victim", "scene"],
+    ["s1", "c2"], ["s2", "c3"],
+    ["s3", "c4"], ["police", "victim"]
+  ],
+  "motives": [
+    { "id": "m1", "text": "Inheritance: secure the estate before the will changed" },
+    { "id": "m2", "text": "Revenge: payback for years of mistreatment" },
+    { "id": "m3", "text": "Cover-up: stop the audit from exposing embezzlement" }
+  ],
+  "solution": {
+    "culprit": "s2",
+    "motive": "m3",
+    "accomplice": "s3",
+    "explanation": "Julian Vance had been siphoning money from the company for years. When Edmund circled the transfers and booked an auditor for Monday, Julian ran out of time. He paid Agatha's son's tuition in exchange for one favor: tipping a powder from his darkroom into Edmund's brandy before she carried it upstairs. Clara's argument was real, but the new will would have helped her, and she was on the phone in the garden the whole time."
+  }
+}

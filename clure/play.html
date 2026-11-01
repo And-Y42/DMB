@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="cases/DMB.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Daily Case</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Playfair+Display:wght@700;900&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/game.js" defer></script>
+</head>
+<body class="play">
+  <header class="topbar">
+    <a href="index.html" class="brand">
+        DMB
+    </a>
+    <div class="case-meta">
+      <span id="case-number"></span>
+      <strong id="case-title">Loading case file…</strong>
+    </div>
+    <div class="actions">
+      <button id="notes-toggle" class="btn btn-ghost" aria-expanded="false" aria-controls="notepad">Notes</button>
+      <button id="accuse-btn" class="btn btn-red">Make accusation</button>
+    </div>
+  </header>
+
+  <main class="board-wrap">
+    <div id="board">
+      <svg id="strings" aria-hidden="true">
+        <defs>
+          <radialGradient id="pin-grad" cx="35%" cy="35%">
+            <stop offset="0" stop-color="#ff8a80"/>
+            <stop offset="0.5" stop-color="#d32f2f"/>
+            <stop offset="1" stop-color="#7f0000"/>
+          </radialGradient>
+        </defs>
+        <g id="string-layer"></g>
+      </svg>
+    </div>
+  </main>
+
+  <aside id="notepad" class="notepad" aria-label="Detective's notes">
+    <div class="notepad-head">
+      <span>Detective's notes</span>
+      <button id="notes-close" aria-label="Close notes">×</button>
+    </div>
+    <textarea id="notes" placeholder="Jot down your theories…"></textarea>
+  </aside>
+
+  <dialog id="detail" class="modal">
+    <button class="modal-x" data-close aria-label="Close">×</button>
+    <div id="detail-body"></div>
+    <div class="modal-actions">
+      <button id="detail-note" class="btn btn-ghost">Add to notes</button>
+    </div>
+  </dialog>
+
+  <dialog id="accuse" class="modal modal-wide">
+    <form id="accuse-form">
+      <p class="kicker">Final report</p>
+      <h2>File your accusation</h2>
+      <fieldset><legend>Who did it?</legend><div id="culprit-options" class="choices"></div></fieldset>
+      <fieldset><legend>Why?</legend><div id="motive-options" class="choices choices--stack"></div></fieldset>
+      <fieldset><legend>Did they have help?</legend><div id="accomplice-options" class="choices"></div></fieldset>
+      <p class="warning">You only get one accusation per case.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close>Keep investigating</button>
+        <button type="submit" class="btn btn-red">Accuse</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="result" class="modal">
+    <div id="result-body"></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" data-close>Back to board</button>
+      <button id="share-btn" class="btn btn-red">Share result</button>
+    </div>
+  </dialog>
+</body>
+</html>

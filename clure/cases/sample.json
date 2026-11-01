@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-23",
+  "caseNumber": 1,
+  "title": "The Last Toast at Harrow House",
+  "victim": {
+    "name": "Edmund Harrow",
+    "age": 68,
+    "occupation": "Founder, Harrow & Vance Shipping",
+    "causeOfDeath": "Cyanide poisoning",
+    "summary": "Found dead in his study during his own birthday party.",
+    "description": "Edmund was generous to strangers and hard on family. At dinner he told guests he'd be 'setting a few things straight on Monday.' He retired to his study at 8:45 PM with a glass of brandy and was found dead by the housekeeper at 9:20 PM.",
+    "pos": { "x": 42, "y": 32 }
+  },
+  "scene": {
+    "headline": "Shipping Magnate Found Dead at Birthday Gala",
+    "location": "Harrow House, the study",
+    "time": "Saturday, approx. 9:00 PM",
+    "summary": "No sign of struggle. A half-finished brandy sat beside an open appointment book.",
+    "description": "The study door was unlocked and nothing was disturbed. Police tested the brandy decanter on the sideboard and found it clean. Only Edmund's glass contained poison.",
+    "pos": { "x": 39, "y": 72 }
+  },
+  "suspects": [
+    {
+      "id": "s1",
+      "number": 1,
+      "name": "Clara Harrow",
+      "age": 34,
+      "occupation": "Art gallery owner",
+      "relation": "Daughter",
+      "photo": "",
+      "description": "Edmund's only child. Her gallery is deep in debt, and guests heard her argue loudly with her father about money at dinner. Under the current will, she inherits most of the estate.",
+      "pos": { "x": 5, "y": 5 }
+    },
+    {
+      "id": "s2",
+      "number": 2,
+      "name": "Julian Vance",
+      "age": 61,
+      "occupation": "Co-founder, Harrow & Vance",
+      "relation": "Business partner",
+      "photo": "",
+      "description": "Edmund's oldest friend and business partner of thirty years. Charming and meticulous, he handles the company books. A dedicated amateur photographer who still develops his own film.",
+      "pos": { "x": 80, "y": 5 }
+    },
+    {
+      "id": "s3",
+      "number": 3,
+      "name": "Agatha Pell",
+      "age": 57,
+      "occupation": "Housekeeper",
+      "relation": "Employee of 22 years",
+      "photo": "",
+      "description": "Has run Harrow House for over two decades. She prepared and served every drink at the party, including the brandy Edmund took to his study. Quiet and loyal, and by her own account underpaid for years.",
+      "pos": { "x": 5, "y": 58 }
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "type": "Evidence",
+      "title": "The Brandy Glass",
+      "summary": "Smells faintly of bitter almonds. The decanter tested clean.",
+      "description": "Lab results confirm potassium cyanide in the glass only, so the poison went in after the brandy was poured. Agatha Pell carried the glass to Edmund on a silver tray at 8:45 PM.",
+      "pos": { "x": 24, "y": 34 }
+    },
+    {
+      "id": "c2",
+      "type": "Document",
+      "title": "Lawyer's Letter",
+      "summary": "Edmund booked his lawyer for next week to revise the will.",
+      "description": "A letter from Whitcombe & Daly confirms an appointment next Thursday. The attached draft would have increased Clara's share and paid off her gallery's debts. Clara says she knew nothing about it.",
+      "pos": { "x": 22, "y": 6 }
+    },
+    {
+      "id": "c3",
+      "type": "Document",
+      "title": "Torn Ledger Page",
+      "summary": "$2.1M moved to an offshore account. Initialed 'J.V.'",
+      "description": "Found crumpled in the study wastebasket. Edmund had circled the transfers in red ink and written 'Ask J. — Monday?' in the margin.",
+      "pos": { "x": 61, "y": 6 }
+    },
+    {
+      "id": "c4",
+      "type": "Document",
+      "title": "Appointment Book",
+      "summary": "Monday, 9:00 AM — 'Independent auditor. Bring everything.'",
+      "description": "Open on Edmund's desk, with Monday's entry underlined twice. His dinner remark about 'setting things straight on Monday' reads very differently now.",
+      "pos": { "x": 62, "y": 36 }
+    },
+    {
+      "id": "c5",
+      "type": "Financial",
+      "title": "Tuition Receipt",
+      "summary": "Agatha's son's university tuition, paid in full last week.",
+      "description": "A $48,000 cashier's check, found in Agatha's room. The bank traced it to an account belonging to Julian Vance. Agatha earns $41,000 a year.",
+      "pos": { "x": 21, "y": 64 }
+    },
+    {
+      "id": "c6",
+      "type": "Testimony",
+      "title": "Phone Records",
+      "summary": "Clara was on a call in the garden from 8:40 to 9:25 PM.",
+      "description": "Confirmed by her carrier and by a gardener who saw her pacing by the fountain the whole time.",
+      "pos": { "x": 5, "y": 35 }
+    },
+    {
+      "id": "c7",
+      "type": "Evidence",
+      "title": "Darkroom Supplies",
+      "summary": "Julian's darkroom stocks potassium cyanide.",
+      "description": "Police searching Julian's home darkroom found a nearly empty jar of potassium cyanide, used in some antique print-toning processes. He says he hasn't touched it in years, but the seal was recently broken.",
+      "pos": { "x": 80, "y": 40 }
+    }
+  ],
+  "connections": [
+    ["victim", "s1"], ["victim", "s2"], ["victim", "s3"],
+    ["victim", "c1"], ["victim", "c4"], ["victim", "scene"],
+    ["s1", "c2"], ["s1", "c6"],
+    ["s2", "c3"], ["s2", "c7"], ["c3", "c4"],
+    ["s3", "c1"], ["s3", "c5"]
+  ],
+  "motives": [
+    { "id": "m1", "text": "Inheritance: secure the estate before the will changed" },
+    { "id": "m2", "text": "Revenge: payback for years of mistreatment" },
+    { "id": "m3", "text": "Cover-up: stop the audit from exposing embezzlement" }
+  ],
+  "solution": {
+    "culprit": "s2",
+    "motive": "m3",
+    "accomplice": "s3",
+    "explanation": "Julian Vance had been siphoning money from the company for years. When Edmund circled the transfers and booked an auditor for Monday, Julian ran out of time. He paid Agatha's son's tuition in exchange for one favor: tipping a powder from his darkroom into Edmund's brandy before she carried it upstairs. Clara's argument was real, but the new will would have helped her, and she was on the phone in the garden the whole time."
+  }
+}
