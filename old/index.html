@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Title Page -->
+    <div id="title-page" class="page visible clickable">
+        <img src="DMB.png" alt="Title Image" id="title-image">
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page">
+        <img src="DMB Corkb.png" alt="Home Image" id="home-image">
+        
+        <svg id="connections" width="100vw" height="100vh" style="position:absolute; top:0; left:0; z-index:0;">
+            <line id="line1" x1="0" y1="0" x2="0" y2="0" stroke="red" stroke-width="8" />
+        </svg>
+
+        <div id="home-content">
+            <!-- Crime Scene Note -->
+            <img src="crime scene note.png" alt="Crime Scene" id="crime-image">
+            <div id="crime-text">
+                <pre>Murdered in Walmart Intimates
+
+Injected with Portuguese
+Water Snake venom</pre>
+            </div>
+
+            <!-- Clues and Images -->
+            <img src="fabricscrap.png" alt="Fabric Scrap" id="fabric-image">
+            <img src="gingerbobgirl.png" alt="Ginger Bob Girl" id="suspect3-image">
+            <div class="suspect-text" id="suspect3-text">
+                <p>Samantha, 19</p>
+            </div>
+            
+            <img src="girlnotecard2.png" alt="Girl Notecard" id="suspect1-image">
+            <div class="suspect-text" id="suspect1-text">
+                <p>Tabby, 20</p>
+            </div>
+
+            <img src="largenotecard.png" alt="Large Notecard" id="large-notecard-image">
+            <img src="largenotecard.png" alt="Large Notecard" id="at-a-loss-image">
+            <div id='at-a-loss-text'>
+                <p>"At a loss"</p>
+            </div>
+            <img src="newspaper.png" alt="Newspaper" id="newspaper-image">
+
+            <!-- Plain Notecard -->
+            <img src="notecardplain.png" alt="Plain Notecard" id="notecard-plain-image">
+            <div class="overlay-text" id="plain-text">
+                <pre>Victim's Father
+
+Organic chem professor
+
+Victim is self-proclaimed 
+"daddy's girl"</pre>
+            </div>
+
+            <!-- Other Clues -->
+            <img src="ocrimey.png" alt="Goat OCrimey" id="ocrimey-image">
+            <div id='ocrimey-text'>
+                <pre>Police Chief
+O'Crimey
+                </pre>
+            </div>
+            <img src="shortguybrown.png" alt="Guy in Brown" id="suspect2-image">
+            <div class="suspect-text" id="suspect2-text">
+                <p>Andre, 19</p>
+            </div>
+
+            <img src="smallnote.png" alt="Small Note" id="small-note-image">
+
+            <!-- Suspects -->
+            <div class="suspect" id="suspect1">
+                <img src="suspect1.png" alt="Suspect 1" id="suspect1-note-image">
+                <div class="overlay-text" id="suspect1-note-text">
+                    <p>Victim's bookie</p>
+                    <p>Communications Major</p>
+                    <p>"Dead clients don't pay"</p>
+                </div>
+            </div>
+
+            <div class="suspect" id="suspect2">
+                <img src="suspect2.png" alt="Suspect 2" id="suspect2-note-image">
+                <div class="overlay-text" id="suspect2-note-text">
+                    <p>Hanging around in dairy section</p>
+                    <p>Recent honor code violation</p>
+                    <p>Rumored blackmailer</p>
+                </div>
+            </div>
+
+            <div class="suspect" id="suspect3">
+                <img src="suspect3.png" alt="Suspect 3" id="suspect3-note-image">
+                <div class="overlay-text" id="suspect3-note-text">
+                    <p>Hannah's bestie and Andre's ex</p>
+                    <p>Recent trip to Lisbon</p>
+                    <p>On Aisle 13 during murder</p>
+                </div>
+            </div>
+
+            <!-- Victim -->
+             <div class="victim" id="victim">
+                <img src="victim1.png" alt="Victim" id="victim-image">
+                <img src="victimnote.png" alt="Victim Note" id="victim-note-image">
+                <div id="victim-text">
+                    <p>Hannah, 20</p>
+                </div>
+
+                <div class="overlay-text" id="victim-note-text">
+                    <p>Agoraphobic and triskaidekaphobic</p>
+                    <p>Owes $300 to Tabby</p>
+                    <p>Dog on a raw egg diet</p>
+                </div>
+            </div>
+            <img src="Family.png" alt="family" id="family-image">
+            <img src="Snake.png" alt="snake" id="snake-image">
+            <button id="go-to-guess">Go to Guess Page</button>
+        </div>
+    </div>
+    
+    <div id="guess-page" class="page">
+        <div class="image-group image-pos-1" id="whois" data-question="whois">
+            <img src="whois.png" alt="Who is" class="fade-image">
+            <div class="button-group">
+                <button class="sus1button" data-answer="SUS 1">SUS 1</button>
+                <button class="sus2button" data-answer="SUS 2">SUS 2</button>
+                <button class="sus3button" data-answer="SUS 3">SUS 3</button>
+            </div>
+        </div>
+
+        <div class="image-group image-pos-2" id="whatwas" data-question="whatwas">
+            <img src="whatwas.png" alt="What was" class="fade-image">
+            <div class="button-group">
+                <button class="revengebutton" data-answer="Revenge">Revenge</button>
+                <button class="moneybutton" data-answer="Money">Money</button>
+                <button class="accidentbutton" data-answer="Accident">Accident</button>
+            </div>
+        </div>
+        <div class="image-group image-pos-3" id="isthere" data-question="isthere">
+            <img src="isthere.png" alt="Is there" class="fade-image">
+            <div class="button-group">
+                <button class="nonebutton" data-answer="None">None</button>
+                <button class="sus1button" data-answer="SUS 1">SUS 1</button>
+                <button class="sus2button" data-answer="SUS 2">SUS 2</button>
+                <button class="sus3button" data-answer="SUS 3">SUS 3</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
