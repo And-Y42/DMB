@@ -21,15 +21,31 @@ function todayKey() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-async function loadCase() {
-  const key = new URLSearchParams(location.search).get('case') || todayKey();
+/* Turn a Date object into "YYYY-MM-DD" */
+function dateKey(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+/* Load a case for a given date.
+   `date` can be a "YYYY-MM-DD" string, a Date object, or left empty. */
+async function loadCase(date) {
+  let key;
+  if (date instanceof Date) {
+    key = dateKey(date);
+  } else if (typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    key = date;
+  } else {
+    // nothing passed: fall back to ?case= in the URL, then today
+    key = new URLSearchParams(location.search).get('case') || dateKey();
+  }
+
   for (const path of [`cases/${key}.json`, 'cases/sample.json']) {
     try {
       const res = await fetch(path);
       if (res.ok) return await res.json();
     } catch { /* try next */ }
   }
-  throw new Error('No case file found');
+  throw new Error(`No case file found for ${key}`);
 }
 
 async function init() {
