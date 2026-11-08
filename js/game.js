@@ -34,8 +34,9 @@ async function loadCase() {
 
 async function init() {
   try {
-    caseData = await loadCase('2026-11-01');  
-    caseData = await loadCase();
+    caseData = await loadCase('2026-11-01');
+    // caseData = await loadCase(new Date(2026, 10, 1)); 
+    // caseData = await loadCase();
   } catch {
     $('#case-title').textContent = 'Case file missing';
     $('#board').insertAdjacentHTML('beforeend',
