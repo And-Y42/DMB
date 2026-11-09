@@ -7,14 +7,14 @@
     "age": 20,
     "description": "Agoraphobic and triskaidekaphobic. Owes $300 to Tabby. Dog on a raw egg diet.",
     "pos": { "x": 42, "y": 32 },
-    "photo": "./cases/victim1.png"
+    "photo": "/cases/11-01/victim1.png"
   },
   "police": {
     "name": "O'Crimey",
     "relation": "Police Chief",
-    "photo": "",
+    "photo": "./assets/ocrimey.png",
     "description": "At a loss",
-    "pos": { "x": 70, "y": 60 }
+    "pos": { "x": 85, "y": 60 }
   },
   "scene": {
     "headline": "Hannah Found Dead in Walmart",
@@ -31,7 +31,7 @@
       "name": "Tabby",
       "age": 20,
       "relation": "Victim's bookie",
-      "photo": "",
+      "photo": "./cases/11-01/girlnotecard2.png",
       "description": "Communications major",
       "pos": { "x": 5, "y": 5 }
     },
@@ -41,7 +41,7 @@
       "name": "Andre",
       "age": 19,
       "relation": "Classmate",
-      "photo": "",
+      "photo": "./cases/11-01/shortguybrown.png",
       "description": "Rumored blackmailer. Recently received an honor code violation",
       "pos": { "x": 80, "y": 5 }
     },
@@ -51,7 +51,7 @@
       "name": "Samantha",
       "age": 19,
       "relation": "Hannah's bestie",
-      "photo": "",
+      "photo": "./cases/11-01/gingerbobgirl.png",
       "description": "Andre's ex. Recently went on a trip to Lisbon",
       "pos": { "x": 5, "y": 58 }
     }
@@ -63,8 +63,8 @@
       "title": "Family Relations",
       "summary": "",
       "description": "Victim is self-proclaimed 'daddys girl'. Victim's Father is an Organic Chem Professor",
-      "photo":"./cases/Family.png",
-      "pos": { "x": 24, "y": 34 }
+      "photo":"./cases/11-01/Family.png",
+      "pos": { "x": 60, "y": 36 }
     },
     {
       "id": "c2",
@@ -72,7 +72,7 @@
       "title": "Bookie Letter",
       "summary": "Tabby kept track of all of Hannah's transactions",
       "description": "Dead clients don't pay",
-      "pos": { "x": 5, "y": 35 }
+      "pos": { "x": 25, "y": 5 }
     },
     {
       "id": "c3",
